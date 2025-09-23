@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saintbit Math Education - IA Adaptativa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styleHome.css" />
+  <link rel="stylesheet" href="css/styleGamificacion.css" />
+  <script src="js/lenguaje.js"></script>
+  <script src="js/ia.js" defer></script>
+</head>
+<body>
+  <!-- Menú superior -->
+  <nav class="menu-bar">
+    <div class="menu-logo"><img src="assets/img/logo.png" alt="logo" /></div>
+    <ul class="menu-nav">
+      <li><a href="home.html" id="nav-home">Inicio</a></li>
+      <li><a href="gamificacion.html" id="nav-gamificacion">Gamificación</a></li>
+      <li><a href="analitica.html" id="nav-analitica">Analítica</a></li>
+      <li><a href="IAadpatativa.html" id="nav-interactiva" class="active">IA Interactiva</a></li>
+      
+    </ul>
+    <div class="menu-actions">
+      <div class="menu-combo-group">
+        <select id="language-ia">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+        <div class="user-profile" id="user-profile">
+          <span id="user-role">Usuario</span>
+          <div class="profile-dropdown" id="profile-dropdown">
+            <div id="profile-name">Nombre Usuario</div>
+            <button id="logout-btn">Cerrar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="main-home">
+    <section class="home-content">
+      <h1 id="ia-title"></h1>
+      <p id="ia-desc"></p>
+    </section>
+    <section>
+      <!-- Selector de nivel propio de IA (si lo quieres en IA, si no, comenta este bloque) -->
+      <div class="nivel-selector-area">
+        <label for="nivel-ia" id="nivel-ia-label">Nivel:</label>
+        <select id="nivel-ia">
+          <option value="preescolar"></option>
+          <option value="1"></option>
+          <option value="2"></option>
+          <option value="3"></option>
+          <option value="4"></option>
+        </select>
+      </div>
+      <div id="ia-consejo" class="ia-consejo"></div>
+      <div id="ia-pregunta-area" class="ia-pregunta-area">
+        <h3 id="ia-question-header"></h3>
+        <div id="ia-question"></div>
+        <div id="ia-answer"></div>
+      </div>
+      <!-- Puedes agregar más widgets de IA aquí -->
+    </section>
+  </main>
+</body>
+</html>

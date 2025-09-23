@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saintbit Math Education - Gamificación</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styleHome.css" />
+  <link rel="stylesheet" href="css/stylegamificacion.css" />
+  <script src="js/lenguaje.js"></script>
+  <script src="js/gamificacion.js" defer></script>
+</head>
+<body>
+  <!-- Menú superior -->
+  <nav class="menu-bar">
+    <div class="menu-logo">
+      <img src="assets/img/logo.png" alt="logo" />
+    </div>
+    <ul class="menu-nav">
+      <li><a href="home.html" id="nav-home">Inicio</a></li>
+      <li><a href="gamificacion.html" id="nav-gamificacion">Gamificación</a></li>
+      <li><a href="analitica.html" id="nav-analitica">Analítica</a></li>
+      <li><a href="IAadaptativa.html" id="nav-interactiva">IA Interactiva</a></li>
+      
+    </ul>
+    <div class="menu-actions">
+      <div class="menu-combo-group">
+        <select id="language-gamificacion">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+        <div class="user-profile" id="user-profile">
+          <span id="user-role">Usuario</span>
+          <div class="profile-dropdown" id="profile-dropdown">
+            <div id="profile-name">Nombre Usuario</div>
+            <button id="logout-btn">Cerrar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Fondo animado canvas -->
+  <div class="math-anim-bg">
+    <canvas id="math-canvas"></canvas>
+  </div>
+  <main class="main-home">
+    <section class="home-content">
+      <h1 id="titulo-gamificacion">Desafíos Gamificados</h1>
+      <p id="desc-gamificacion">
+        Desafíos interactivos, ejercicios con gamificación, puntajes y recompensas para 1° a 4° básico. Plataforma responsiva, moderna y perfecta para estudiantes y administradores.
+      </p>
+      <div class="nivel-selector-area">
+        <label for="nivel-selector" id="nivel-label">Nivel:</label>
+        <select id="nivel-selector">
+          <option value="preescolar">Preescolar</option>
+          <option value="1">1°</option>
+          <option value="2">2°</option>
+          <option value="3">3°</option>
+          <option value="4">4°</option>
+        </select>
+      </div>
+    </section>
+    <section class="games-area">
+      <div class="games-grid" id="games-grid"></div>
+    </section>
+  </main>
+  <script src="js/gamificacion.js"></script>
+  <script>
+  // Fondo animado matemático (igual al home)
+  const canvas = document.getElementById('math-canvas');
+  const ctx = canvas.getContext('2d');
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+  const digits = [];
+  for (let i = 0; i < 40; i++) {
+    digits.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      digit: Math.floor(Math.random() * 10),
+      speed: 1 + Math.random() * 2,
+      size: 22 + Math.random() * 10
+    });
+  }
+  function drawDigits() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    digits.forEach(d => {
+      ctx.save();
+      ctx.globalAlpha = 0.16;
+      ctx.font = d.size + 'px Segoe UI, Montserrat, Arial';
+      ctx.fillStyle = "#adff2f";
+      ctx.fillText(d.digit, d.x, d.y);
+      ctx.restore();
+      d.y += d.speed;
+      if (d.y > canvas.height) d.y = -20;
+    });
+  }
+  setInterval(drawDigits, 60);
+  </script>
+</body>
+</html>

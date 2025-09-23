@@ -1,0 +1,206 @@
+body {
+  background: linear-gradient(115deg, #212a47 0%, #141c2f 100%);
+  color: #defbe6;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-title {
+  text-align: center;
+  margin-top: 2.6em;
+  color: #83ffc1;
+  font-weight: 700;
+  font-size: 2.2em;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 20px #212a4790;
+}
+
+.intro-text {
+  text-align: center;
+  margin: 0 10vw 2em 10vw;
+  font-size: 1.1em;
+  color: #a0f8bfcc;
+}
+
+.material-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.3em;
+  margin: 2em 0 2.5em 0;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  .material-grid {
+    grid-template-columns: 1fr;
+    margin: 1.2em auto;
+    max-width: 90vw;
+  }
+}
+
+.grade-card {
+  background: #232b44e9;
+  border-radius: 19px;
+  border: 2.5px solid #424ee2;
+  box-shadow: 0 7px 40px #41ffac2e;
+  padding: 1.8em 1.6em 2.2em 1.6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1.8em;
+  transition: box-shadow .18s, transform .16s, border-color .18s;
+  cursor: default;
+}
+
+.grade-card:hover {
+  box-shadow: 0 15px 48px #c2dfff48;
+  border-color: #5afa8d;
+  transform: translateY(-2.5px) scale(1.014);
+}
+
+.grade-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 1.3em;
+  width: 100%;
+}
+
+.grade-title {
+  font-size: 1.12em;
+  color: #9cffcb;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  flex: 1 1 0;
+}
+
+.grade-badge.pdf-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #142943;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #23ff7c2b;
+  width: 38px;
+  height: 38px;
+  margin-right: -.1em;
+}
+
+.grade-badge.pdf-badge img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.grade-desc {
+  color: #e9fae2;
+  text-align: center;
+  margin-bottom: 1.2em;
+  font-size: 1.05em;
+}
+
+.grade-link {
+  display: inline-block;
+  background: linear-gradient(94deg, #3cffbf 55%, #adff2f 100%);
+  color: #052027;
+  font-weight: 700;
+  border-radius: 7.5px;
+  font-size: 1.13em;
+  box-shadow: 0 1.5px 16px #8affcba8;
+  padding: 0.9em 2.1em;
+  letter-spacing: 0.4px;
+  text-align: center;
+  margin-top: 0.15em;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: background .18s, color .18s;
+}
+
+.grade-link:hover,
+.grade-link:focus {
+  background: linear-gradient(87deg, #bbffe1 80%, #adff2f 100%);
+  color: #18384c;
+  text-decoration: underline;
+}
+
+.menu-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  min-width: 70px;
+}
+
+.logo-bg {
+  background: #232b44;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #19266566;
+  padding: 8px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-logo img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.menu-combo-group select:hover,
+.menu-combo-group select:focus {
+  border-color: #adff2f;
+}
+
+.math-anim-bg {
+  position: fixed;
+  z-index: -1;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none; /* para que no interfiera con clicks */
+}
+
+#math-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.menu-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;   /* Empuja a la derecha */
+  padding-right: 15px;
+}
+
+.menu-combo-group select {
+  padding: 6px 14px;
+  border-radius: 24px;
+  border: 1.5px solid #51ffd2;
+  background: #2c3757;
+  color: #defbe6;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+  box-shadow: 0 2px 6px #51ffd266;
+}
+
+.menu-combo-group select:hover,
+.menu-combo-group select:focus {
+  border-color: #adff2f;
+  box-shadow: 0 4px 10px #adff2fbb;
+}
+canvas {
+  z-index: 9999 !important;
+  background: transparent !important;
+}

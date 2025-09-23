@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saintbit Math Education - Analítica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styleHome.css" />
+  <link rel="stylesheet" href="css/styleGamificacion.css" />
+</head>
+<body>
+  <!-- Menú superior -->
+  <nav class="menu-bar">
+    <div class="menu-logo">
+      <img src="assets/img/logo.png" alt="logo" />
+   <ul class="menu-nav">
+  <li><a href="home.html" id="nav-home">Inicio</a></li>
+  <li><a href="gamificacion.html" id="nav-gamificacion">Gamificación</a></li>
+  <li><a href="analitica.html" id="nav-analitica">Analítica</a></li>
+  <li><a href="IAadpatativa.html" id="nav-interactiva">IA Interactiva</a></li>
+  
+</ul>
+
+
+    <div class="menu-actions">
+      <div class="menu-combo-group">
+        <select id="language-gamificacion">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+        <div class="user-profile" id="user-profile">
+          <span id="user-role">Usuario</span>
+          <div class="profile-dropdown" id="profile-dropdown">
+            <div id="profile-name">Nombre Usuario</div>
+            <button id="logout-btn">Cerrar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Fondo matemático animado -->
+  <div class="math-anim-bg">
+    <div class="math-animations">
+      <span class="math-float" style="--x:5vw; --y:20vh; --size:2.7rem; --delay:0s;">π</span>
+      <span class="math-float" style="--x:28vw; --y:60vh; --size:3.1rem; --delay:2.2s;">÷</span>
+      <span class="math-float" style="--x:47vw; --y:26vh; --size:2.1rem; --delay:1.2s;">7</span>
+      <span class="math-float" style="--x:60vw; --y:70vh; --size:2.8rem; --delay:1.8s;">x</span>
+      <span class="math-float" style="--x:84vw; --y:46vh; --size:2.5rem; --delay:3.0s;">=</span>
+      <span class="math-float" style="--x:76vw; --y:13vh; --size:2rem; --delay:0.9s;">%</span>
+    </div>
+  </div>
+  <main class="main-home">
+    <section class="analitica-area">
+      <h2 class="analitica-titulo" id="analitica-title">Analítica de usuarios</h2>
+      <div class="tabla-usuarios-contenedor">
+        <table id="tabla-usuarios">
+          <thead>
+            <tr>
+              <th id="th-usuario">Usuario</th>
+              <th id="th-puntaje">Puntaje</th>
+              <th id="th-nivel">Nivel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Se llena desde JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="js/analitica.js"></script>
+</body>
+</html>

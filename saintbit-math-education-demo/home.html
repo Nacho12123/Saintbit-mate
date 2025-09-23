@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saintbit Math Education - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styleHome.css" />
+  <script src="js/lenguaje.js"></script>
+  <script src="js/home.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap">
+</head>
+<body>
+  <!-- Menú superior -->
+  <nav class="menu-bar">
+    <div class="menu-logo">
+      <img src="assets/img/logo.png" alt="logo" />
+    </div>
+    <ul class="menu-nav">
+      <li><a href="home.html" id="nav-home">Inicio</a></li>
+      <li><a href="gamificacion.html" id="nav-gamificacion">Gamificación</a></li>
+      <li><a href="analitica.html" id="nav-analitica">Analítica</a></li>
+      <li><a href="IAadpatativa.html" id="nav-interactiva">IA Interactiva</a></li>
+      
+    </ul>
+    <div class="menu-actions">
+      <div class="menu-combo-group">
+        <select id="language-home">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+        <div class="user-profile" id="user-profile">
+          <span id="user-role">Usuario</span>
+          <div class="profile-dropdown" id="profile-dropdown">
+            <div id="profile-name">Nombre Usuario</div>
+            <button id="logout-btn">Cerrar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Fondo animado de dígitos matemáticos -->
+  <div class="math-anim-bg">
+    <canvas id="math-canvas"></canvas>
+  </div>
+  <main class="main-home">
+    <section class="home-content">
+      <h1 class="math-desc-title">Bienvenido a Saintbit Math Education</h1>
+      <p class="math-desc">Explora competencias matemáticas por grado y comienza a jugar.</p>
+      <!-- Cards de grados -->
+     <div class="grade-cards">
+  <!-- Preescolar a 4° activos -->
+  <div class="grade-card preescolar">
+    <div class="grade-header">
+      <span class="grade-badge">P</span>
+      <span class="grade-title">Preescolar</span>
+    </div>
+    <div class="grade-desc">
+      Contar hacia delante y hacia atrás, clasificar objetos, comparar cantidades, nombres de formas y más.
+    </div>
+    <a class="grade-link" href="preescolar.html">Ver las 73 competencias &gt;&gt;</a>
+  </div>
+  <div class="grade-card grado1">
+    <div class="grade-header">
+      <span class="grade-badge">1.er</span>
+      <span class="grade-title">1.er grado</span>
+    </div>
+    <div class="grade-desc">
+      Sumas y restas básicas, conteo salteado, decenas y unidades, patrones con figuras, medición de longitud y más.
+    </div>
+    <a class="grade-link" href="1_basico.html">Ver las 117 competencias &gt;&gt;</a>
+  </div>
+  <div class="grade-card grado2">
+    <div class="grade-header">
+      <span class="grade-badge">2.º</span>
+      <span class="grade-title">2.º grado</span>
+    </div>
+    <div class="grade-desc">
+      Valor posicional, sumas de varios dígitos, estrategias de suma y resta, operaciones mixtas y más.
+    </div>
+    <a class="grade-link" href="grado2.html">Ver las 127 competencias &gt;&gt;</a>
+  </div>
+  <div class="grade-card grado3">
+    <div class="grade-header">
+      <span class="grade-badge">3.er</span>
+      <span class="grade-title">3.er grado</span>
+    </div>
+    <div class="grade-desc">
+      Multiplicación y división, modelos de área, fracciones y decimales, líneas y ángulos, perímetro y más.
+    </div>
+    <a class="grade-link" href="grado3.html">Ver las 183 competencias &gt;&gt;</a>
+  </div>
+  <div class="grade-card grado4">
+    <div class="grade-header">
+      <span class="grade-badge">4.º</span>
+      <span class="grade-title">4.º grado</span>
+    </div>
+    <div class="grade-desc">
+      División con resto, clasificación de polígonos, área y volumen, probabilidad y más.
+    </div>
+    <a class="grade-link" href="grado4.html">Ver las 130 competencias &gt;&gt;</a>
+  </div>
+
+  <!-- 5° a 8° bloqueados -->
+  <div class="grade-card grado5 locked">
+    <div class="grade-header">
+      <span class="grade-badge"><span class="locked-icon">&#128274;</span> 5.º</span>
+      <span class="grade-title">5.º grado</span>
+    </div>
+    <div class="grade-desc">
+      Operaciones con fracciones y decimales, estimaciones, máximo común divisor, conversiones de unidades y más.
+    </div>
+    <span class="grade-link locked-link">Bloqueado</span>
+  </div>
+  <div class="grade-card grado6 locked">
+    <div class="grade-header">
+      <span class="grade-badge"><span class="locked-icon">&#128274;</span> 6.º</span>
+      <span class="grade-title">6.º grado</span>
+    </div>
+    <div class="grade-desc">
+      Razones y porcentajes, orden de operaciones, números enteros, plano cartesiano, teoría de números y más.
+    </div>
+    <span class="grade-link locked-link">Bloqueado</span>
+  </div>
+  <div class="grade-card grado7 locked">
+    <div class="grade-header">
+      <span class="grade-badge"><span class="locked-icon">&#128274;</span> 7.º</span>
+      <span class="grade-title">7.º grado</span>
+    </div>
+    <div class="grade-desc">
+      Relaciones proporcionales, números racionales, propiedades de expresiones, volumen y área de superficie y más.
+    </div>
+    <span class="grade-link locked-link">Bloqueado</span>
+  </div>
+  <div class="grade-card grado8 locked">
+    <div class="grade-header">
+      <span class="grade-badge"><span class="locked-icon">&#128274;</span> 8.º</span>
+      <span class="grade-title">8.º grado</span>
+    </div>
+    <div class="grade-desc">
+      Ecuaciones lineales, números irracionales, funciones, transformaciones geométricas y más.
+    </div>
+    <span class="grade-link locked-link">Bloqueado</span>
+  </div>
+  <!-- SIMCE opción extra -->
+  <div class="grade-card simce">
+    <div class="grade-header">
+      <span class="grade-badge simce-icon">&#128202;</span>
+      <span class="grade-title">SIMCE</span>
+    </div>
+    <div class="grade-desc">
+      Ensayos y práctica para la prueba SIMCE de matemática en todos los niveles.
+    </div>
+    <a class="grade-link" href="simce.html">Ir a SIMCE &gt;&gt;</a>
+  </div>
+</div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Menú navegación
+    document.querySelectorAll('.menu-nav a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        window.location.href = this.getAttribute('href');
+      });
+    });
+    // Usuario muestra y dropdown
+    const userProfile = document.getElementById('user-profile');
+    const profileDropdown = document.getElementById('profile-dropdown');
+    userProfile.addEventListener('mouseenter', () => profileDropdown.style.display = 'block');
+    userProfile.addEventListener('mouseleave', () => profileDropdown.style.display = 'none');
+    document.getElementById('profile-name').textContent = window.localStorage.getItem('username') || 'Nombre Usuario';
+    // Logout función demo
+    document.getElementById('logout-btn').onclick = () => {
+      window.localStorage.removeItem('username');
+      location.reload();
+    };
+    // Animaciones de dígitos matemáticos en canvas
+    const canvas = document.getElementById('math-canvas');
+    const ctx = canvas.getContext('2d');
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    // Animador de dígitos
+    const digits = [];
+    for (let i = 0; i < 44; i++) {
+      digits.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        digit: Math.floor(Math.random() * 10),
+        speed: 1 + Math.random() * 2,
+        size: 22 + Math.random() * 10
+      });
+    }
+    function drawDigits() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      digits.forEach(d => {
+        ctx.save();
+        ctx.globalAlpha = 0.18;
+        ctx.font = d.size + 'px Montserrat';
+        ctx.fillStyle = "#adff2f";
+        ctx.fillText(d.digit, d.x, d.y);
+        ctx.restore();
+        d.y += d.speed;
+        if (d.y > canvas.height) d.y = -20;
+      });
+    }
+    setInterval(drawDigits, 60);
+  </script>
+</body>
+</html>
