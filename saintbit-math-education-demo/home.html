@@ -5,211 +5,410 @@
   <title>Saintbit Math Education - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styleHome.css" />
-  <script src="js/lenguaje.js"></script>
-  <script src="js/home.js" defer></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="js/lenguaje.js" defer></script>
 </head>
 <body>
-  <!-- Menú superior -->
-  <nav class="menu-bar">
-    <div class="menu-logo">
-      <img src="assets/img/logo.png" alt="logo" />
+
+<!-- Fondo animado -->
+<div class="math-anim-bg">
+  <canvas id="math-canvas"></canvas>
+</div>
+
+<!-- Partículas flotantes -->
+<div class="floating-shapes">
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+  <div class="shape shape-4"></div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="logo-wrapper">
+        <div class="logo-icon">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <span class="logo-text">Saintbit Math</span>
+      </div>
     </div>
-    <ul class="menu-nav">
-      <li><a href="home.html" id="nav-home">Inicio</a></li>
-      <li><a href="gamificacion.html" id="nav-gamificacion">Gamificación</a></li>
-      <li><a href="analitica.html" id="nav-analitica">Analítica</a></li>
-      <li><a href="IAadpatativa.html" id="nav-interactiva">IA Interactiva</a></li>
-      
+    <ul class="nav-menu">
+      <li><a href="home.html" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
+      <li><a href="gamificacion.html" class="nav-link"><i class="fas fa-gamepad"></i> Gamificación</a></li>
+      <li><a href="analitica.html" class="nav-link"><i class="fas fa-chart-bar"></i> Analítica</a></li>
+      <li><a href="IAadpatativa.html" class="nav-link"><i class="fas fa-robot"></i> IA Interactiva</a></li>
     </ul>
-    <div class="menu-actions">
-      <div class="menu-combo-group">
-        <select id="language-home">
-          <option value="es">Español</option>
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-          <option value="ar">العربية</option>
+    <div class="nav-actions">
+      <div class="language-selector">
+        <select id="language-selector">
+        <option value="es">🇪🇸 Español</option>
+        <option value="en">🇺🇸 English</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="ar">🇸🇦 العربية</option>
         </select>
-        <div class="user-profile" id="user-profile">
-          <span id="user-role">Usuario</span>
-          <div class="profile-dropdown" id="profile-dropdown">
-            <div id="profile-name">Nombre Usuario</div>
-            <button id="logout-btn">Cerrar sesión</button>
+
+      </div>
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+</header>
+<main class="main-home">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Plataforma Educativa</span>
+      </div>
+      <h1 class="hero-title">
+       Desarrolla <span class="highlight">tu potencial</span> en matemáticas
+       </h1>
+  
+       </div>
+       </div>
+       </section>
+
+  <!-- Sección de Grados -->
+  <section class="grades-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Elige tu Nivel Educativo</h2>
+        <p>Selecciona el grado correspondiente para acceder a contenidos especializados</p>
+      </div>
+      
+      <div class="grade-cards">
+        <!-- Preescolar -->
+        <div class="grade-card preescolar" data-grade="preescolar">
+          <div class="card-header">
+            <div class="grade-badge">
+              <i class="fas fa-baby"></i>
+              <span>P</span>
+            </div>
+            <div class="card-status available">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">Preescolar</h3>
+            <p class="grade-desc">
+              Contar hacia delante y hacia atrás, clasificar objetos, comparar cantidades, 
+              nombres de formas y conceptos básicos.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count">
+                <i class="fas fa-star"></i>
+                73 competencias
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="preescolar.html" class="grade-link">
+              <span>Explorar Nivel</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Fondo animado de dígitos matemáticos -->
-  <div class="math-anim-bg">
-    <canvas id="math-canvas"></canvas>
-  </div>
-  <main class="main-home">
-    <section class="home-content">
-      <h1 class="math-desc-title">Bienvenido a Saintbit Math Education</h1>
-      <p class="math-desc">Explora competencias matemáticas por grado y comienza a jugar.</p>
-      <!-- Cards de grados -->
-     <div class="grade-cards">
-  <!-- Preescolar a 4° activos -->
-  <div class="grade-card preescolar">
-    <div class="grade-header">
-      <span class="grade-badge">P</span>
-      <span class="grade-title">Preescolar</span>
-    </div>
-    <div class="grade-desc">
-      Contar hacia delante y hacia atrás, clasificar objetos, comparar cantidades, nombres de formas y más.
-    </div>
-    <a class="grade-link" href="preescolar.html">Ver las 73 competencias &gt;&gt;</a>
-  </div>
-  <div class="grade-card grado1">
-    <div class="grade-header">
-      <span class="grade-badge">1.er</span>
-      <span class="grade-title">1.er grado</span>
-    </div>
-    <div class="grade-desc">
-      Sumas y restas básicas, conteo salteado, decenas y unidades, patrones con figuras, medición de longitud y más.
-    </div>
-    <a class="grade-link" href="1_basico.html">Ver las 117 competencias &gt;&gt;</a>
-  </div>
-  <div class="grade-card grado2">
-    <div class="grade-header">
-      <span class="grade-badge">2.º</span>
-      <span class="grade-title">2.º grado</span>
-    </div>
-    <div class="grade-desc">
-      Valor posicional, sumas de varios dígitos, estrategias de suma y resta, operaciones mixtas y más.
-    </div>
-    <a class="grade-link" href="grado2.html">Ver las 127 competencias &gt;&gt;</a>
-  </div>
-  <div class="grade-card grado3">
-    <div class="grade-header">
-      <span class="grade-badge">3.er</span>
-      <span class="grade-title">3.er grado</span>
-    </div>
-    <div class="grade-desc">
-      Multiplicación y división, modelos de área, fracciones y decimales, líneas y ángulos, perímetro y más.
-    </div>
-    <a class="grade-link" href="grado3.html">Ver las 183 competencias &gt;&gt;</a>
-  </div>
-  <div class="grade-card grado4">
-    <div class="grade-header">
-      <span class="grade-badge">4.º</span>
-      <span class="grade-title">4.º grado</span>
-    </div>
-    <div class="grade-desc">
-      División con resto, clasificación de polígonos, área y volumen, probabilidad y más.
-    </div>
-    <a class="grade-link" href="grado4.html">Ver las 130 competencias &gt;&gt;</a>
-  </div>
 
-  <!-- 5° a 8° bloqueados -->
-  <div class="grade-card grado5 locked">
-    <div class="grade-header">
-      <span class="grade-badge"><span class="locked-icon">&#128274;</span> 5.º</span>
-      <span class="grade-title">5.º grado</span>
-    </div>
-    <div class="grade-desc">
-      Operaciones con fracciones y decimales, estimaciones, máximo común divisor, conversiones de unidades y más.
-    </div>
-    <span class="grade-link locked-link">Bloqueado</span>
-  </div>
-  <div class="grade-card grado6 locked">
-    <div class="grade-header">
-      <span class="grade-badge"><span class="locked-icon">&#128274;</span> 6.º</span>
-      <span class="grade-title">6.º grado</span>
-    </div>
-    <div class="grade-desc">
-      Razones y porcentajes, orden de operaciones, números enteros, plano cartesiano, teoría de números y más.
-    </div>
-    <span class="grade-link locked-link">Bloqueado</span>
-  </div>
-  <div class="grade-card grado7 locked">
-    <div class="grade-header">
-      <span class="grade-badge"><span class="locked-icon">&#128274;</span> 7.º</span>
-      <span class="grade-title">7.º grado</span>
-    </div>
-    <div class="grade-desc">
-      Relaciones proporcionales, números racionales, propiedades de expresiones, volumen y área de superficie y más.
-    </div>
-    <span class="grade-link locked-link">Bloqueado</span>
-  </div>
-  <div class="grade-card grado8 locked">
-    <div class="grade-header">
-      <span class="grade-badge"><span class="locked-icon">&#128274;</span> 8.º</span>
-      <span class="grade-title">8.º grado</span>
-    </div>
-    <div class="grade-desc">
-      Ecuaciones lineales, números irracionales, funciones, transformaciones geométricas y más.
-    </div>
-    <span class="grade-link locked-link">Bloqueado</span>
-  </div>
-  <!-- SIMCE opción extra -->
-  <div class="grade-card simce">
-    <div class="grade-header">
-      <span class="grade-badge simce-icon">&#128202;</span>
-      <span class="grade-title">SIMCE</span>
-    </div>
-    <div class="grade-desc">
-      Ensayos y práctica para la prueba SIMCE de matemática en todos los niveles.
-    </div>
-    <a class="grade-link" href="simce.html">Ir a SIMCE &gt;&gt;</a>
-  </div>
-</div>
+        <!-- 1er Grado -->
+        <div class="grade-card grado1" data-grade="1">
+          <div class="card-header">
+            <div class="grade-badge">
+              <i class="fas fa-dice-one"></i>
+              <span>1°</span>
+            </div>
+            <div class="card-status available">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">1er Grado</h3>
+            <p class="grade-desc">
+              Sumas y restas básicas, conteo salteado, decenas y unidades, 
+              patrones con figuras, medición de longitud.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count">
+                <i class="fas fa-star"></i>
+                117 competencias
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="1_basico.html" class="grade-link">
+              <span>Explorar Nivel</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2do Grado -->
+        <div class="grade-card grado2" data-grade="2">
+          <div class="card-header">
+            <div class="grade-badge">
+              <i class="fas fa-dice-two"></i>
+              <span>2°</span>
+            </div>
+            <div class="card-status available">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">2do Grado</h3>
+            <p class="grade-desc">
+              Valor posicional, sumas de varios dígitos, estrategias de suma y resta, 
+              operaciones mixtas y resolución de problemas.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count">
+                <i class="fas fa-star"></i>
+                127 competencias
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="grado2.html" class="grade-link">
+              <span>Explorar Nivel</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3er Grado -->
+        <div class="grade-card grado3" data-grade="3">
+          <div class="card-header">
+            <div class="grade-badge">
+              <i class="fas fa-dice-three"></i>
+              <span>3°</span>
+            </div>
+            <div class="card-status available">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">3er Grado</h3>
+            <p class="grade-desc">
+              Multiplicación y división, modelos de área, fracciones y decimales, 
+              líneas y ángulos, perímetro y área.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count">
+                <i class="fas fa-star"></i>
+                183 competencias
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="grado3.html" class="grade-link">
+              <span>Explorar Nivel</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4to Grado -->
+        <div class="grade-card grado4" data-grade="4">
+          <div class="card-header">
+            <div class="grade-badge">
+              <i class="fas fa-dice-four"></i>
+              <span>4°</span>
+            </div>
+            <div class="card-status available">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">4to Grado</h3>
+            <p class="grade-desc">
+              División con resto, clasificación de polígonos, área y volumen, 
+              probabilidad y estadística básica.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count">
+                <i class="fas fa-star"></i>
+                130 competencias
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="grado4.html" class="grade-link">
+              <span>Explorar Nivel</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5to Grado - Bloqueado -->
+        <div class="grade-card grado5 locked" data-grade="5">
+          <div class="card-header">
+            <div class="grade-badge locked">
+              <i class="fas fa-lock"></i>
+              <span>5°</span>
+            </div>
+            <div class="card-status locked">
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">5to Grado</h3>
+            <p class="grade-desc">
+              Operaciones con fracciones y decimales, estimaciones, 
+              máximo común divisor, conversiones de unidades.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count locked">
+                <i class="fas fa-hourglass-half"></i>
+                Próximamente
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="grade-link locked">
+              <i class="fas fa-lock"></i>
+              <span>Bloqueado</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 6to Grado - Bloqueado -->
+        <div class="grade-card grado6 locked" data-grade="6">
+          <div class="card-header">
+            <div class="grade-badge locked">
+              <i class="fas fa-lock"></i>
+              <span>6°</span>
+            </div>
+            <div class="card-status locked">
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">6to Grado</h3>
+            <p class="grade-desc">
+              Razones y porcentajes, orden de operaciones, números enteros, 
+              plano cartesiano, teoría de números.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count locked">
+                <i class="fas fa-hourglass-half"></i>
+                Próximamente
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="grade-link locked">
+              <i class="fas fa-lock"></i>
+              <span>Bloqueado</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 7mo Grado - Bloqueado -->
+        <div class="grade-card grado7 locked" data-grade="7">
+          <div class="card-header">
+            <div class="grade-badge locked">
+              <i class="fas fa-lock"></i>
+              <span>7°</span>
+            </div>
+            <div class="card-status locked">
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">7mo Grado</h3>
+            <p class="grade-desc">
+              Relaciones proporcionales, números racionales, propiedades de expresiones, 
+              volumen y área de superficie.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count locked">
+                <i class="fas fa-hourglass-half"></i>
+                Próximamente
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="grade-link locked">
+              <i class="fas fa-lock"></i>
+              <span>Bloqueado</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 8vo Grado - Bloqueado -->
+        <div class="grade-card grado8 locked" data-grade="8">
+          <div class="card-header">
+            <div class="grade-badge locked">
+              <i class="fas fa-lock"></i>
+              <span>8°</span>
+            </div>
+            <div class="card-status locked">
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">8vo Grado</h3>
+            <p class="grade-desc">
+              Ecuaciones lineales, números irracionales, funciones, 
+              transformaciones geométricas y algebra avanzada.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count locked">
+                <i class="fas fa-hourglass-half"></i>
+                Próximamente
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="grade-link locked">
+              <i class="fas fa-lock"></i>
+              <span>Bloqueado</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- SIMCE - Especial -->
+        <div class="grade-card simce special" data-grade="simce">
+          <div class="card-header">
+            <div class="grade-badge simce">
+              <i class="fas fa-chart-line"></i>
+              <span>SIMCE</span>
+            </div>
+            <div class="card-status special">
+              <i class="fas fa-medal"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="grade-title">Preparación SIMCE</h3>
+            <p class="grade-desc">
+              Ensayos y práctica para la prueba SIMCE de matemática en todos los niveles. 
+              Preparación integral y efectiva.
+            </p>
+            <div class="grade-stats">
+              <span class="competency-count simce">
+                <i class="fas fa-target"></i>
+                Evaluación Nacional
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="simce.html" class="grade-link simce">
+              <span>Preparar SIMCE</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+  </section>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Saintbit Math Education. Todos los derechos reservados.</p>
       </div>
-    </section>
-  </main>
-  <script>
-    // Menú navegación
-    document.querySelectorAll('.menu-nav a').forEach(item => {
-      item.addEventListener('click', function(e) {
-        window.location.href = this.getAttribute('href');
-      });
-    });
-    // Usuario muestra y dropdown
-    const userProfile = document.getElementById('user-profile');
-    const profileDropdown = document.getElementById('profile-dropdown');
-    userProfile.addEventListener('mouseenter', () => profileDropdown.style.display = 'block');
-    userProfile.addEventListener('mouseleave', () => profileDropdown.style.display = 'none');
-    document.getElementById('profile-name').textContent = window.localStorage.getItem('username') || 'Nombre Usuario';
-    // Logout función demo
-    document.getElementById('logout-btn').onclick = () => {
-      window.localStorage.removeItem('username');
-      location.reload();
-    };
-    // Animaciones de dígitos matemáticos en canvas
-    const canvas = document.getElementById('math-canvas');
-    const ctx = canvas.getContext('2d');
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-    // Animador de dígitos
-    const digits = [];
-    for (let i = 0; i < 44; i++) {
-      digits.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        digit: Math.floor(Math.random() * 10),
-        speed: 1 + Math.random() * 2,
-        size: 22 + Math.random() * 10
-      });
-    }
-    function drawDigits() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      digits.forEach(d => {
-        ctx.save();
-        ctx.globalAlpha = 0.18;
-        ctx.font = d.size + 'px Montserrat';
-        ctx.fillStyle = "#adff2f";
-        ctx.fillText(d.digit, d.x, d.y);
-        ctx.restore();
-        d.y += d.speed;
-        if (d.y > canvas.height) d.y = -20;
-      });
-    }
-    setInterval(drawDigits, 60);
-  </script>
+    </div>
+  </footer>
+</main>
+<script src="js/home.js"></script>
 </body>
 </html>

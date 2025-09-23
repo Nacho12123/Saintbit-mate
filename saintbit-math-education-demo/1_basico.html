@@ -1,169 +1,404 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<title>Saintbit Math - 1° Básico</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="css/styleHome.css" />
-<link rel="stylesheet" href="css/style1basico.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" />
-<script src="js/lenguaje.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Saintbit Math - 1° Básico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style1basico.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
 
-<div class="math-anim-bg">
+<!-- Fondo animado matemático -->
+<div class="math-background">
   <canvas id="math-canvas"></canvas>
 </div>
 
+<!-- Partículas flotantes -->
+<div class="floating-shapes">
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+  <div class="shape shape-4"></div>
+</div>
+
 <header>
-  <nav class="menu-bar">
-    <div class="menu-logo">
-      <span class="logo-bg">
-        <img src="assets/img/logo.png" alt="logo" />
-      </span>
-    </div>
-    <ul class="menu-nav">
-      <li><a href="home.html">Inicio</a></li>
-      <li><a href="gamificacion.html">Gamificación</a></li>
-      <li><a href="analitica.html">Analítica</a></li>
-      <li><a href="IAadpatativa.html">IA Interactiva</a></li>
-    </ul>
-    <div class="menu-actions">
-      <div class="menu-combo-group">
-        <select id="language-selector">
-          <option value="es">Español</option>
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-          <option value="ar">العربية</option>
-        </select>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-wrapper">
+          <div class="logo-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <span class="logo-text">Saintbit Math</span>
+        </div>
+      </div>
+      
+      <ul class="nav-menu">
+        <li><a href="home.html" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="gamificacion.html" class="nav-link"><i class="fas fa-gamepad"></i> Gamificación</a></li>
+        <li><a href="analitica.html" class="nav-link"><i class="fas fa-chart-bar"></i> Analítica</a></li>
+        <li><a href="IAadpatativa.html" class="nav-link"><i class="fas fa-robot"></i> IA Interactiva</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <div class="language-selector">
+          <select id="language-dropdown">
+            <option value="es">🇪🇸 Español</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="ar">🇸🇦 العربية</option>
+          </select>
+        </div>
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </div>
   </nav>
 </header>
 
 <main>
-  <h1 class="main-title">Material Educativo - 1° Básico</h1>
-  <p class="intro-text">
-    Aquí puedes descargar y consultar guías, evaluaciones y recursos oficiales para reforzar las competencias matemáticas.
-  </p>
-
-  <section class="material-grid">
-
-    <div class="grade-card">
-      <div class="grade-header">
-        <span class="grade-badge pdf-badge"><img src="assets/img/icon.svg" alt="PDF" /></span>
-        <span class="grade-title">1BASICO-CUADERNO_DE_TRABAJO_MATEMATICA_2</span>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i>
+        <span>Material Educativo Oficial</span>
       </div>
-      <div class="grade-desc">Cuaderno de trabajo para 1° básico matemática 2.</div>
-      <a class="grade-link" href="assets/pdfs/1BASICO-CUADERNO_DE_TRABAJO_MATEMATICA_2.pdf" target="_blank">Descargar PDF</a>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-header">
-        <span class="grade-badge pdf-badge"><img src="assets/img/icon.svg" alt="PDF" /></span>
-        <span class="grade-title">1BASICO-EVALUACION_PERIODO2</span>
+      <h1 class="hero-title">
+        Matemáticas para
+        <span class="highlight">1° Básico</span>
+      </h1>
+      <p class="hero-description">
+        Descubre recursos educativos diseñados especialmente para fortalecer el aprendizaje matemático.
+        Guías interactivas, evaluaciones y material didáctico de calidad profesional.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Recursos PDF</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Períodos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Gratuito</div>
+        </div>
       </div>
-      <div class="grade-desc">Evaluación periodo 2 para 1° básico matemática.</div>
-      <a class="grade-link" href="assets/pdfs/1BASICO-EVALUACION_PERIODO2.pdf" target="_blank">Descargar PDF</a>
     </div>
-
-    <div class="grade-card">
-      <div class="grade-header">
-        <span class="grade-badge pdf-badge"><img src="assets/img/icon.svg" alt="PDF" /></span>
-        <span class="grade-title">1BASICO-GUIA_DIDACTICA_MATEMATICA_3</span>
-      </div>
-      <div class="grade-desc">Guía didáctica 3 para 1° básico matemática.</div>
-      <a class="grade-link" href="assets/pdfs/1BASICO-GUIA_DIDACTICA_MATEMATICA_3.pdf" target="_blank">Descargar PDF</a>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-header">
-        <span class="grade-badge pdf-badge"><img src="assets/img/icon.svg" alt="PDF" /></span>
-        <span class="grade-title">1evaluacion3matematica</span>
-      </div>
-      <div class="grade-desc">Evaluación 3 matemática 1° básico.</div>
-      <a class="grade-link" href="assets/pdfs/1evaluacion3matematica.pdf" target="_blank">Descargar PDF</a>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-header">
-        <span class="grade-badge pdf-badge"><img src="assets/img/icon.svg" alt="PDF" /></span>
-        <span class="grade-title">201307232053570.1BASICO-GUIA_DIDACTICA_MATEMATICA</span>
-      </div>
-      <div class="grade-desc">Guía didáctica matemática completa.</div>
-      <a class="grade-link" href="assets/pdfs/201307232053570.1BASICO-GUIA_DIDACTICA_MATEMATICA.pdf" target="_blank">Descargar PDF</a>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-header">
-        <span class="grade-badge pdf-badge"><img src="assets/img/icon.svg" alt="PDF" /></span>
-        <span class="grade-title">cuaderno_de_trabajo_1basico_matematica_periodo4</span>
-      </div>
-      <div class="grade-desc">Cuaderno de trabajo periodo 4 matemáticas.</div>
-      <a class="grade-link" href="assets/pdfs/cuaderno_de_trabajo_1basico_matematica_periodo4.pdf" target="_blank">Descargar PDF</a>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-header">
-        <span class="grade-badge pdf-badge"><img src="assets/img/icon.svg" alt="PDF" /></span>
-        <span class="grade-title">evaluacion_1basico_matematica_periodo4</span>
-      </div>
-      <div class="grade-desc">Evaluación 1° básico periodo 4 matemática.</div>
-      <a class="grade-link" href="assets/pdfs/evaluacion_1basico_matematica_periodo4.pdf" target="_blank">Descargar PDF</a>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-header">
-        <span class="grade-badge pdf-badge"><img src="assets/img/icon.svg" alt="PDF" /></span>
-        <span class="grade-title">guia_didactica_1_matematica_periodo4</span>
-      </div>
-      <div class="grade-desc">Guía didáctica periodo 4 matemática 1° básico.</div>
-      <a class="grade-link" href="assets/pdfs/guia_didactica_1_matematica_periodo4.pdf" target="_blank">Descargar PDF</a>
-    </div>
-
   </section>
+
+  <!-- Filtros -->
+  <section class="filters-section">
+    <div class="container">
+      <div class="filters-wrapper">
+        <h3>Filtrar por tipo:</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-th"></i> Todos
+          </button>
+          <button class="filter-btn" data-filter="cuaderno">
+            <i class="fas fa-book"></i> Cuadernos
+          </button>
+          <button class="filter-btn" data-filter="evaluacion">
+            <i class="fas fa-clipboard-check"></i> Evaluaciones
+          </button>
+          <button class="filter-btn" data-filter="guia">
+            <i class="fas fa-map"></i> Guías
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid de Materiales -->
+  <section class="materials-section">
+    <div class="container">
+      <div class="materials-grid">
+
+        <div class="material-card" data-type="cuaderno" data-period="2">
+          <div class="card-header">
+            <div class="card-icon cuaderno-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div class="card-badge">Período 2</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cuaderno de Trabajo Matemática 2</h3>
+            <p class="card-description">
+              Ejercicios prácticos y actividades interactivas para reforzar conceptos matemáticos fundamentales del segundo período.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Números</span>
+              <span class="tag">Sumas</span>
+              <span class="tag">Figuras</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-info">
+              <span class="file-size">2.4 MB</span>
+              <span class="pages-count">32 páginas</span>
+            </div>
+            <a href="assets/pdfs/1BASICO-CUADERNO_DE_TRABAJO_MATEMATICA_2.pdf" 
+               class="download-btn" target="_blank">
+              <i class="fas fa-download"></i>
+              <span>Descargar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="material-card" data-type="evaluacion" data-period="2">
+          <div class="card-header">
+            <div class="card-icon evaluacion-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <div class="card-badge">Período 2</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Evaluación Período 2</h3>
+            <p class="card-description">
+              Instrumento de evaluación para medir el progreso y comprensión de conceptos matemáticos del período 2.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Evaluación</span>
+              <span class="tag">Diagnóstico</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-info">
+              <span class="file-size">1.8 MB</span>
+              <span class="pages-count">12 páginas</span>
+            </div>
+            <a href="assets/pdfs/1BASICO-EVALUACION_PERIODO2.pdf" 
+               class="download-btn" target="_blank">
+              <i class="fas fa-download"></i>
+              <span>Descargar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="material-card" data-type="guia" data-period="3">
+          <div class="card-header">
+            <div class="card-icon guia-icon">
+              <i class="fas fa-map"></i>
+            </div>
+            <div class="card-badge">Período 3</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Guía Didáctica Matemática 3</h3>
+            <p class="card-description">
+              Material de apoyo para docentes con metodologías y estrategias para enseñar matemáticas de forma efectiva.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Docentes</span>
+              <span class="tag">Metodología</span>
+              <span class="tag">Estrategias</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-info">
+              <span class="file-size">3.2 MB</span>
+              <span class="pages-count">45 páginas</span>
+            </div>
+            <a href="assets/pdfs/1BASICO-GUIA_DIDACTICA_MATEMATICA_3.pdf" 
+               class="download-btn" target="_blank">
+              <i class="fas fa-download"></i>
+              <span>Descargar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="material-card" data-type="evaluacion" data-period="3">
+          <div class="card-header">
+            <div class="card-icon evaluacion-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <div class="card-badge">Período 3</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Evaluación 3 Matemática</h3>
+            <p class="card-description">
+              Evaluación comprehensiva para el tercer período, incluyendo todos los contenidos vistos hasta el momento.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Evaluación</span>
+              <span class="tag">Período 3</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-info">
+              <span class="file-size">1.6 MB</span>
+              <span class="pages-count">10 páginas</span>
+            </div>
+            <a href="assets/pdfs/1evaluacion3matematica.pdf" 
+               class="download-btn" target="_blank">
+              <i class="fas fa-download"></i>
+              <span>Descargar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="material-card" data-type="guia" data-period="1">
+          <div class="card-header">
+            <div class="card-icon guia-icon">
+              <i class="fas fa-map"></i>
+            </div>
+            <div class="card-badge">Completa</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Guía Didáctica Matemática Completa</h3>
+            <p class="card-description">
+              Guía completa con todos los contenidos del año, perfecta para planificación anual y referencia constante.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Completa</span>
+              <span class="tag">Planificación</span>
+              <span class="tag">Anual</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-info">
+              <span class="file-size">8.7 MB</span>
+              <span class="pages-count">120 páginas</span>
+            </div>
+            <a href="assets/pdfs/201307232053570.1BASICO-GUIA_DIDACTICA_MATEMATICA.pdf" 
+               class="download-btn" target="_blank">
+              <i class="fas fa-download"></i>
+              <span>Descargar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="material-card" data-type="cuaderno" data-period="4">
+          <div class="card-header">
+            <div class="card-icon cuaderno-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div class="card-badge">Período 4</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cuaderno de Trabajo Período 4</h3>
+            <p class="card-description">
+              Material de trabajo para el cuarto período, consolidando todos los aprendizajes del año escolar.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Final</span>
+              <span class="tag">Consolidación</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-info">
+              <span class="file-size">2.8 MB</span>
+              <span class="pages-count">28 páginas</span>
+            </div>
+            <a href="assets/pdfs/cuaderno_de_trabajo_1basico_matematica_periodo4.pdf" 
+               class="download-btn" target="_blank">
+              <i class="fas fa-download"></i>
+              <span>Descargar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="material-card" data-type="evaluacion" data-period="4">
+          <div class="card-header">
+            <div class="card-icon evaluacion-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <div class="card-badge">Período 4</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Evaluación Período 4</h3>
+            <p class="card-description">
+              Evaluación final del año escolar, midiendo todos los objetivos de aprendizaje alcanzados.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Final</span>
+              <span class="tag">Anual</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-info">
+              <span class="file-size">2.1 MB</span>
+              <span class="pages-count">15 páginas</span>
+            </div>
+            <a href="assets/pdfs/evaluacion_1basico_matematica_periodo4.pdf" 
+               class="download-btn" target="_blank">
+              <i class="fas fa-download"></i>
+              <span>Descargar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="material-card" data-type="guia" data-period="4">
+          <div class="card-header">
+            <div class="card-icon guia-icon">
+              <i class="fas fa-map"></i>
+            </div>
+            <div class="card-badge">Período 4</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Guía Didáctica Período 4</h3>
+            <p class="card-description">
+              Orientaciones metodológicas para el período final, incluyendo estrategias de cierre y evaluación.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Cierre</span>
+              <span class="tag">Metodología</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-info">
+              <span class="file-size">3.5 MB</span>
+              <span class="pages-count">38 páginas</span>
+            </div>
+            <a href="assets/pdfs/guia_didactica_1_matematica_periodo4.pdf" 
+               class="download-btn" target="_blank">
+              <i class="fas fa-download"></i>
+              <span>Descargar</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer informativo -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Saintbit Math</h4>
+          <p>Plataforma educativa dedicada a la enseñanza de matemáticas para educación básica.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="#">Guías Didácticas</a></li>
+            <li><a href="#">Evaluaciones</a></li>
+            <li><a href="#">Material Interactivo</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="#">Centro de Ayuda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Saintbit Math. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
 </main>
-
-<script>
-const canvas = document.getElementById('math-canvas');
-const ctx = canvas.getContext('2d');
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-
-const digits = [];
-for (let i = 0; i < 40; i++) {
-  digits.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    digit: Math.floor(Math.random() * 10),
-    speed: 1 + Math.random() * 2,
-    size: 44 + Math.random() * 20
-  });
-}
-
-function drawDigits() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  digits.forEach(d => {
-    ctx.save();
-    ctx.globalAlpha = 1;
-    ctx.fillStyle = "#5affa8d"; // verde brillante
-    ctx.font = d.size + 'px Arial'; // Arial para asegurar visibilidad
-    ctx.fillStyle = "yellow";
-    ctx.fillText(d.digit, d.x, d.y);
-    ctx.restore();
-    d.y += d.speed;
-    if (d.y > canvas.height) d.y = -20;
-  });
-  requestAnimationFrame(drawDigits);
-}
-drawDigits();
-
-</script>
-
+<script src="js/script_1_basico.js"></script>
 </body>
 </html>
